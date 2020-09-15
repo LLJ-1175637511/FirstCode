@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:background="@mipmap/qq_chat"   android:textSize="20sp"
+        android:text="你好那就放那苏菲娜，是否能，暗示吗那是，放那，是否能，阿发，能，暗示吗那是，放那，是否能，阿发，"
+        android:paddingLeft="35dp" android:paddingTop="12dp" android:paddingRight="25dp"
+        android:paddingBottom="15dp" android:textColor="#FFF"/>
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:background="@mipmap/qq_chat1"   android:textSize="20sp"
+        android:text="你好那就放那苏菲娜，是否能，暗示吗那是，放那，是否能，阿发，能，暗示吗那是，放那，是否能，阿发，"
+        android:paddingLeft="35dp" android:paddingTop="12dp" android:paddingRight="25dp"
+        android:paddingBottom="15dp" android:textColor="#FFF"/>
+</LinearLayout>

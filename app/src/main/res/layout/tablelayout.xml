@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:collapseColumns="3"
+    android:shrinkColumns="1"
+    android:stretchColumns="2">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TableRow>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:text="one"/>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:text="two"/>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:text="three"/>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:text="four"/>
+    </TableRow>
+
+</TableLayout>
+
+<!--1、列是从0开始计数的
+    2、shrinkColumns可压缩列 当内容过多时允许此列压缩
+       正常textview：666
+       压缩textview：6
+                    6
+                    6
+    3、stretchColumns可拉伸列 当布局不足铺满屏幕时 自动填充屏幕
+    4、collapseColumns隐藏列 不显示内容（等同于gone）-->

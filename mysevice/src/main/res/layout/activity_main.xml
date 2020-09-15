@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <Button
+        android:id="@+id/handler_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="handler子线程更新UI"/>
+
+    <Button
+        android:id="@+id/startService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动service"/>
+
+    <Button
+        android:id="@+id/bindService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定service"/>
+
+    <Button
+        android:id="@+id/unbindService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解绑service"/>
+
+    <Button
+        android:id="@+id/stopService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止service"/>
+
+    <Button
+        android:id="@+id/startIntentService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动IntentService"/>
+
+    <Button
+        android:id="@+id/stopIntentService_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止IntentService"/>
+
+    <Button
+        android:id="@+id/exit_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出应用"/>
+</LinearLayout>

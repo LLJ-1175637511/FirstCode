@@ -1,0 +1,7 @@
+include ':mysevice'
+include ':message'
+include ':fileoperation'
+include ':broadcastreceiver'
+include ':fragmenttest'
+include ':app'
+rootProject.name = "TheFirstCode"

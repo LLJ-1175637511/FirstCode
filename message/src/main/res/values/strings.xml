@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Message</string>
+    <string name="txt">msg%1$s</string>
+</resources>
