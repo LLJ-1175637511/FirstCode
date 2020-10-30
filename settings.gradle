@@ -1,3 +1,5 @@
+include ':kotlincoroutines'
+include ':getphonexyzdata'
 include ':mysevice'
 include ':message'
 include ':fileoperation'
