@@ -33,18 +33,29 @@ fun main(){
 
     //3.当程序全部执行完毕 再调用.await()函数（阻塞协程式） 获取结果
     //程序变成了并行 耗时1500ms
+//    runBlocking{
+//        val start = System.currentTimeMillis()
+//        val result1 = async{
+//            delay(1000)
+//            5 + 5
+//        }
+//        val result2 = async{
+//            delay(1000)
+//            4+4
+//        }
+//        println("result:${result1.await()+result2.await()}")
+//        val end = System.currentTimeMillis()
+//        println("cost ${end-start}ms")
+//    }
+
+    //4.withContext(指定一个线程) 基本相当于async{}.await()
+    //Default：多用于计算密度大的任务
+    //IO:安卓只允许在子线程请求网络
+    //Main:只能在安卓程序中使用 纯kotlin会报错
     runBlocking{
-        val start = System.currentTimeMillis()
-        val result1 = async{
-            delay(1000)
-            5 + 5
+        val result = withContext(Dispatchers.Default){
+            4+6
         }
-        val result2 = async{
-            delay(1000)
-            4+4
-        }
-        println("result:${result1.await()+result2.await()}")
-        val end = System.currentTimeMillis()
-        println("cost ${end-start}ms")
+        println(result)
     }
 }
