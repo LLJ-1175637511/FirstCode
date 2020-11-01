@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.edit
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.example.jetpack.R
@@ -33,6 +34,15 @@ class MainActivity : AppCompatActivity() {
         clear.setOnClickListener {
             viewModel.clear()
         }
+
+        getUser.setOnClickListener {
+            val userId = (1..1000).random().toString()
+            viewModel.getUser(userId)
+        }
+
+        viewModel.user.observe(this, Observer {
+            tv.text = it.firstName
+        })
 
 //        viewModel.count.observe(this, Observer {
 //            tv.text = it.toString()
