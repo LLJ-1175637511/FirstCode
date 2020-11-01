@@ -5,36 +5,24 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.concurrent.thread
 
-class MyViewActivity:AppCompatActivity() {
+class MyView2Activity:AppCompatActivity() {
     private val view2 by lazy { MyView2(this) }
     private var time = 0L
     private var flag = false
-    private val handler = object : Handler(Looper.getMainLooper()) {
-        override fun handleMessage(msg: Message) {
-            when(msg.what){
-                0x10->{
-                    view2.freshUi()
-                }
-            }
-            super.handleMessage(msg)
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(view2)
         flag = true
-        Thread(Runnable {
+        thread {
             while (flag){
-                if ( System.currentTimeMillis() - time>50){
-                    val msg = handler.obtainMessage()
-                    msg.what = 0x10
-                    handler.sendMessage(msg)
+                if (System.currentTimeMillis()-time>50){
+                    view2.freshUi()
                     time = System.currentTimeMillis()
                 }
             }
-        }).start()
+        }
     }
 
     override fun onDestroy() {

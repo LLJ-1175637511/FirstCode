@@ -36,7 +36,7 @@ class MyView: View {
             style = Paint.Style.STROKE
             strokeWidth = 5F
         }
-        mBitmap = BitmapFactory.decodeResource(resources,R.drawable.myloc)
+        mBitmap = BitmapFactory.decodeResource(resources,R.drawable.mydrawing)
     }
 
     /**
@@ -46,8 +46,8 @@ class MyView: View {
     override fun onDraw(canvas: Canvas?) {
 //        canvas?.drawCircle(50F,50F,50F,mPaint)
 //        canvas?.drawRect(50F,120F,150F,180F,mPaint)
-        val bitmap = Bitmap.createScaledBitmap(mBitmap,100,100,true)
-        canvas?.drawBitmap(bitmap,400F,400F,null)
+        val bitmap = Bitmap.createScaledBitmap(mBitmap,800,600,true)
+        canvas?.drawBitmap(bitmap,100F,100F,null)
         super.onDraw(canvas)
     }
 
