@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 
-class MainViewModel(cou:Int):ViewModel() {
+class LiveDataViewModelViewModel(cou:Int):ViewModel() {
 
     val count:LiveData<Int> get() = _counter
     private val _counter = MutableLiveData<Int>()

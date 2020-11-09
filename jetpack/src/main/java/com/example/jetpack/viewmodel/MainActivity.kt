@@ -7,13 +7,12 @@ import android.os.Bundle
 import androidx.core.content.edit
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.observe
 import com.example.jetpack.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: LiveDateViewModel
     private lateinit var sp:SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this,
             MainVMFactory(cCount)
-        )[MainViewModel::class.java]
+        )[LiveDateViewModel::class.java]
 
         bt.setOnClickListener {
             viewModel.plusOne()

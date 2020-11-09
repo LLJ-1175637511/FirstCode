@@ -1,3 +1,4 @@
+include ':maniuclass'
 include ':jetpack'
 include ':tencentclass'
 include ':kotlincoroutines'
