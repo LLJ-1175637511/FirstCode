@@ -13,6 +13,8 @@
 
         </activity>
         <activity android:name=".databinding.DataBindingActivity" >
+        </activity>
+        <activity android:name=".recyclerview_vm.RecActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

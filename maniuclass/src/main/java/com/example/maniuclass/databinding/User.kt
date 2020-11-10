@@ -4,6 +4,7 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import com.example.maniuclass.BR
 
+
 class User(
     private var username: String = "",
     private var password: String = ""
@@ -30,3 +31,4 @@ class User(
         notifyPropertyChanged(BR.password)
     }
 }
+

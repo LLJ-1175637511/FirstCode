@@ -31,7 +31,7 @@ class DataBindingActivity : AppCompatActivity() {
         }
  
         dBViewModel.getUser().observe(this, Observer {
-            //判断服务器返回结果
+            //判断服务器返回结果 并更新UI
             activityDbBinding.invalidateAll()
             Log.d(TAG,"change to->User(${it?.getUsername()},${it?.getPassword()})")
         })
